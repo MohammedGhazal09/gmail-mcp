@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gmail MCP</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; max-width: 42rem; padding: 4rem 1.5rem;
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  .tag { color: #666; margin: 0 0 2.5rem; }
+  h2 { font-size: 1.05rem; margin: 2.25rem 0 .5rem; }
+  ul { padding-left: 1.15rem; }
+  li { margin: .3rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid #ddd; color: #666; font-size: .9rem; }
+  a { color: #1a56db; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e6e6e6; }
+    .tag, footer { color: #9a9a9a; }
+    footer { border-color: #333; }
+    a { color: #7aa7ff; }
+  }
+</style>
+</head>
+<body>
+  <h1>Gmail MCP</h1>
+  <p class="tag">A private, single-user tool for reading and sending Gmail from a local AI assistant.</p>
+
+  <p>
+    Gmail MCP is a personal integration that connects a locally running AI assistant
+    to one Gmail mailbox. It is not a public service, has no sign-up, and is used by
+    exactly one person: the mailbox owner.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Lists and reads messages and threads in the owner's own mailbox.</li>
+    <li>Sends mail and manages labels, drafts, and read state, only when the owner explicitly asks.</li>
+  </ul>
+
+  <h2>How it runs</h2>
+  <p>
+    The integration runs entirely on the owner's computer. It talks to the Gmail API
+    over HTTPS using OAuth 2.0, and the resulting access token is stored locally on
+    that machine. There is no server, no database, and no third-party backend.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>
+    It requests the Gmail scope needed to read and manage the owner's own mail.
+    It cannot access anyone else's account and does not request access to any other
+    Google service.
+  </p>
+
+  <p><a href="./privacy.html">Privacy policy</a></p>
+
+  <footer>Gmail MCP &middot; personal use only &middot; contact: mohammedghazal01@outlook.com</footer>
+</body>
+</html>
